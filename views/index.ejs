@@ -1,0 +1,18 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="d-flex flex-column">
+  <%- include('includes/navigation.ejs') %>
+  <main class="d-flex align-items-center justify-content-center vh-100">
+    <section class="main-container">
+      <div>
+        <h1>Bienvenue sur le site du Port de Plaisance Russell</h1>
+        <p>Bienvenue sur le système de réservation de catway du Port de Plaisance Russell. Identifiez-vous pour enregistrer une réservation cliente.</p>
+        <a href="/auth/login" class="btn btn-success btn-lg" type="button">
+          Se connecter
+        </a>
+      </div>
+    </section>
+  </main>
+<%- include('includes/end.ejs') %>

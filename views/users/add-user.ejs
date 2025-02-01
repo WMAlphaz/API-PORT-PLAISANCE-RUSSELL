@@ -1,0 +1,77 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/add-users.css">
+</head>
+<body class="d-flex flex-column">
+<%- include('../includes/navigation.ejs') %>
+<main>
+  <section class="section-container">
+    <header class="section-container__header">
+      <img src="/images/helm32x32.png" alt="logo">
+      <h1>Tableau de bord</h1>
+    </header>
+    <section class="section-container__body">
+      <aside class="body-aside">
+        <%- include('../includes/dashboard-menu.ejs') %>
+      </aside>
+      <div class="body-content">
+        <form action="<% if (editMode) { %>/users/edit-user/<%= user._id %>?_method=PATCH<% } else { %>/users/add-user<% } %>" method="POST">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+          <header class="header-form">
+            <img src="/images/helm32x32.png" alt="logo">
+            <h2>Ajouter un utilisateur</h2>
+          </header>
+          <div class="body-form">
+            <aside class="body-form__aside">
+              <button type="submit" class="button-md w-75">
+                <img src="/images/check.png" alt="check">
+                Sauvegarder
+              </button>
+              <button type="reset" class="button-md w-75">
+                <img src="/images/cancel.png" alt="cancel">
+                Annuler
+              </button>
+              <a href="/users/list-users" class="button-md w-75">
+                <img src="/images/exit.png" alt="exit">
+                Retour
+              </a>
+            </aside>
+            <div class="body-form__data">
+              <div class="mb-3">
+                <label for="name">Nom</label>
+                <input class="form-control" type="text" name="name" id="name" value="<% if (editMode) { %><%= user.name %><% } %>">
+              </div>
+              <div class="mb3">
+                <label for="email">Email</label>
+                <input class="form-control" type="email" name="email" id="email" value="<% if (editMode) { %><%= user.email %><% } %>">
+              </div>
+              <div class="mb3">
+                <label for="password">Mot de passe</label>
+                <input class="form-control" type="password" name="password" id="password">
+              </div>
+              <div class="mb3">
+                <label for="password">Confirmation du mot de passe</label>
+                <input class="form-control" type="password" name="passwordConfirm" id="passwordConfirm">
+              </div>
+            </div> 
+          </div>
+          <footer class="footer-form">
+          </footer>
+        </form>
+      </div>
+    </section>
+    <footer class="section-container__footer">
+      <div></div>
+      <div>
+        <p>
+          Total d'utilisateurs : [<%= users.length %>]
+        </p>
+      </div>
+      <div>
+        <p><%= moment(Date.now()).format('DD/MM/YYYY') %></p>
+      </div>
+    </footer>
+  </section>
+  <%- include('../includes/error-message.ejs') %>
+</main>
+<%- include('../includes/end.ejs') %>

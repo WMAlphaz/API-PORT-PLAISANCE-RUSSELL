@@ -1,0 +1,44 @@
+[
+    {
+        "catwayNumber": 1,
+        "clientName": "Leonardo DiCaprio",
+        "boatName": "Titanic",
+        "checkIn": "2024-03-15T06:00:00Z",
+        "checkOut": "2024-09-20T06:00:00Z"
+    },
+    {
+        "catwayNumber": 3,
+        "clientName": "Elon Musk",
+        "boatName": "Starship",
+        "checkIn": "2024-04-10T06:00:00Z",
+        "checkOut": "2024-12-01T06:00:00Z"
+    },
+    {
+        "catwayNumber": 5,
+        "clientName": "Jack Sparrow",
+        "boatName": "Black Pearl",
+        "checkIn": "2024-05-05T06:00:00Z",
+        "checkOut": "2024-07-30T06:00:00Z"
+    },
+    {
+        "catwayNumber": 6,
+        "clientName": "Jeff Bezos",
+        "boatName": "Blue Origin",
+        "checkIn": "2024-06-20T06:00:00Z",
+        "checkOut": "2024-11-10T06:00:00Z"
+    },
+    {
+        "catwayNumber": 9,
+        "clientName": "Cristiano Ronaldo",
+        "boatName": "CR7",
+        "checkIn": "2024-07-01T06:00:00Z",
+        "checkOut": "2024-08-15T06:00:00Z"
+    },
+    {
+        "catwayNumber": 10,
+        "clientName": "James Bond",
+        "boatName": "Nautilus",
+        "checkIn": "2024-09-05T06:00:00Z",
+        "checkOut": "2025-01-10T06:00:00Z"
+    }
+]

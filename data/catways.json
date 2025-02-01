@@ -1,0 +1,127 @@
+[
+    {
+        "catwayNumber": 1,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 2,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 3,
+        "type": "long",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 4,
+        "type": "short",
+        "catwayState": "2 planches bougent lorsqu'on marche dessus"
+    },
+    {
+        "catwayNumber": 5,
+        "type": "long",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 6,
+        "type": "short",
+        "catwayState": "En cours de réparation"
+    },
+    {
+        "catwayNumber": 7,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 8,
+        "type": "short",
+        "catwayState": "Grosse tâche d'huile et trou en fin de ponton"
+    },
+    {
+        "catwayNumber": 9,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 10,
+        "type": "long",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 11,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 12,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 13,
+        "type": "long",
+        "catwayState": "Plusieurs tâches de peinture bleue sur le ponton"
+    },
+    {
+        "catwayNumber": 14,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 15,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 16,
+        "type": "long",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 17,
+        "type": "short",
+        "catwayState": "2 planches bougent lorsqu'on marche dessus"
+    },
+    {
+        "catwayNumber": 18,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 19,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 20,
+        "type": "long",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 21,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 22,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 23,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 24,
+        "type": "short",
+        "catwayState": "Bon état"
+    },
+    {
+        "catwayNumber": 25,
+        "type": "long",
+        "catwayState": "Bon état"
+    }
+]

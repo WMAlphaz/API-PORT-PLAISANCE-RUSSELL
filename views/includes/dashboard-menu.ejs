@@ -1,0 +1,37 @@
+<div class="dashboard-menu">
+  <ul>
+    <li>
+      <img src="/images/dashboard.png" alt="dashboard">
+      <a href="/dashboard">  
+        Tableau de bord
+      </a>
+    </li>
+    <li>
+      <img src="/images/anchor_.png" alt="anchor">
+      <a href="/catways">
+        Catways
+      </a>
+    </li>
+    <li>
+      <img src="/images/booking.png" alt="reservation">
+      <a href="/reservations">
+        Réservations
+      </a>
+    </li>
+    <li>
+      <img src="/images/user.png" alt="user">
+      <a href="/users/list-users">
+        Utilisateur
+      </a>
+    </li>
+    <li>
+      <form action="/auth/logout" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <img src="/images/logout.png" alt="logout">
+        <button type="submit">
+          Se déconnecter
+        </button>
+      </form>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,19 @@
+{
+  "source": {
+    "include": ["middlewares","controllers","config","models","tests","./app.js"],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "plugins": ["plugins/markdown"] ,
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true
+  },
+  "opts": {
+    "destination": "./docs",
+    "recurse": true,
+    "readme": "./README.md",
+    "tutorials": "./docs/tutorials",
+    "title": "Port de la Plaisance"
+  }
+}

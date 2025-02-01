@@ -1,0 +1,93 @@
+  <%- include('../includes/head.ejs') %>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/catways.css">
+</head>
+<body class="d-flex flex-column">
+  <%- include('../includes/navigation.ejs') %>
+  <main>
+    <section class="section-container">
+
+      <header class="section-container__header">
+        <img src="/images/helm32x32.png" alt="logo">
+        <h1>Tableau de bord</h1>
+      </header>
+
+      <section class="section-container__body">
+        <aside class="body-aside">
+          <%- include('../includes/dashboard-menu.ejs') %>
+        </aside>
+        <div class="body-content">
+          <a href="/catways/get-add" class="add-catway card text-white  mb-3" style="max-width: 18rem;">
+            <div >
+              <header class="card-header">
+                <p>Ajouter un catway</p>
+              </header>
+              <div class="card-body">
+                <img src="/images/plus.png" alt="">
+              </div>
+            </div>
+          </a>
+          <% catways.forEach((catway) => { %>
+            <% const isReserved = reservations.some(reservation => reservation.catwayNumber === catway.catwayNumber && new Date(reservation.checkOut) > new Date())%>
+            <div class="card text-white <%= isReserved ? 'occupied-catway' : 'free-catway' %> mb-3" style="max-width: 18rem;">
+              <header class="card-header">
+                <p>Catway : <%= catway.catwayNumber %></p>
+                <% if (isReserved) { %>
+                  <span>
+                    <img src="/images/boat.png" alt="Boat image">
+                  </span>
+                <% } else {%>
+                  <span>
+                    <img src="/images/free.png" alt="Tag free">
+                  </span>
+                <% } %>
+              </header>
+              <div class="card-body">
+                <div class="d-flex flex-row justify-content-between">
+                  <a href="/catways/<%= catway.catwayNumber %>" class="text-light card-details">
+                    Détails
+                  </a>
+                  <% if(catway.type === 'long') {%>
+                    <img src="/images/tag-long.png" alt="tag">
+                  <% } else {%>
+                    <img src="/images/tag-short.png" alt="tag">
+                  <% } %>
+                </div>
+                <div class="card-options d-flex flex-column mt-2">
+                  <a href="/catways/<%= catway.catwayNumber %>/reservations/get-add" class="btn btn-light btn-sm">
+                    Réservez maintenant
+                  </a>
+                </div>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+      </section>
+      <footer class="section-container__footer">
+        <div>
+          <span></span>
+          <p class="m-0">
+            Catways avec réserves actives
+          </p>
+          <span></span>
+          <p class="m-0">
+            Catways sans réserves actives
+          </p>
+        </div>
+        <div>
+          <p>
+            Total Catways : [<%= catways.length %>]
+          </p>
+          <p>
+            Total Réservations : [<%= reservations.length %>]
+          </p>
+        </div>
+        <div>
+          <p><%= moment(Date.now()).format('DD/MM/YYYY') %></p>
+        </div>
+      </footer>
+    </section>
+
+    <%- include('../includes/error-message.ejs') %>
+  </main>
+<%- include('../includes/end.ejs') %>

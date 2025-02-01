@@ -1,0 +1,83 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/add-reservation.css">
+</head>
+<body class="d-flex flex-column">
+<%- include('../includes/navigation.ejs') %>
+<main>
+  <section class="section-container">
+    <header class="section-container__header">
+      <img src="/images/helm32x32.png" alt="logo">
+      <h1>Tableau de bord</h1>
+    </header>
+    <section class="section-container__body">
+      <aside class="body-aside">
+        <%- include('../includes/dashboard-menu.ejs') %>
+      </aside>
+      <div class="body-content">
+        <form action="/catways/<%= catwayNumber %>/reservations" method="POST" class="body-content__form">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+          <header class="header-from">
+            <img src="/images/helm32x32.png" alt="logo">
+            <h2>Ajouter une réservation</h2>
+          </header>
+          <div class="body-form">
+            <aside class="body-form__aside p-3">
+              <button type="submit" class="button-md w-75">
+                <img src="/images/add.png" alt="adding">
+                Ajouter
+              </button>
+              <button type="reset" class="button-md w-75">
+                <img src="/images/cancel.png" alt="cancel">
+                Annuler
+              </button>
+              <a href="/catways" class="button-md w-75">
+                <img src="/images/exit.png" alt="exit">
+                Retour
+              </a>
+            </aside>
+            <div class="body-form__data">
+              <div class="mb-3">
+                <label for="catway_number" class="form-label">Numéro du Catway</label>
+                <input type="number" class="form-control" name="catway_number" id="catway_number" readonly value="<%= catwayNumber %>">
+              </div>
+              <div class="mb3">
+                <label for="client_name" class="form-label">Nom du client</label>
+                <input type="text" class="form-control" name="client_name" id="client_name">
+              </div>
+              <div class="mb3">
+                <label for="boat_name" class="form-label">Nom du bateau</label>
+                <input type="text" class="form-control" name="boat_name" id="boat_name">
+              </div>
+              <div class="mb3">
+                <label for="check_in" class="form-label">Date d'arrivée</label>
+                <input type="date" class="form-control" name="check_in" id="check_in">
+              </div>
+              <div class="mb3">
+                <label for="check_out" class="form-label">Date de départ</label>
+                <input type="date" class="form-control" name="check_out" id="check_out">
+              </div>
+            </div>  
+          </div>
+          <footer class="footer-form">
+          </footer>
+        </form>
+      </div>
+    </section>
+    <footer class="section-container__footer">
+      <div>
+
+      </div>
+      <div>
+        <p>
+          Réservations totales : [<%= reservations.length %>]
+        </p>
+      </div>
+      <div>
+        <p><%= moment(Date.now()).format('DD/MM/YYYY') %></p>
+      </div>
+    </footer>
+  </section>
+  <%- include('../includes/error-message.ejs') %>  
+</main>
+<%- include('../includes/end.ejs') %>
